@@ -1,17 +1,7 @@
 // App.js
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import { 
-    HomeScreen,
-    Another 
-} from './screens'
+import { appRoute } from './route'
 
-const AppNavigator = createStackNavigator({
-    Home: {
-      screen: HomeScreen
-    },
-    Another: {
-      screen: Another
-    }
-});
+const AppNavigator = createStackNavigator(appRoute, { initialRouteName: 'Home', headerMode: 'none' });
   
 export default createAppContainer(AppNavigator);
